@@ -1,0 +1,12 @@
+You are given a short assembly program which is a disassembled version of a program which has copy protection on it.
+
+The copy protection mechanism works like this:
+1) It prompts the user for a password which must be a number
+1.1) If the input is not a number, it complains about this.
+2) If the password is wrong, it prompt a second and final time
+3) If both guesses are wrong, it exits
+4) If either guess is correct, it prints a welcome message (and then quits, since I don't actually have a game here).
+
+Your assignment:
+1) Make it accept any number as a correct password.
+2) It should still reject a word or letter.

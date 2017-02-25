@@ -1,0 +1,38 @@
+For this assignment you will implement a fake compiler.
+
+Rather than having to detect compiler errors, you will scan the standard input
+for a line that looks like this:
+ERROR X
+(where X is an integer).
+
+If you don't see any such lines, you should simply output:
+Compilation successful.
+
+Otherwise, *every time* you see an error in the input, you will output:
+Error on line N:
+>>Missing ";"<<
+
+(N is the line that the ERROR line was on.)
+(Yes, the error will always be a missing semicolon.)
+
+In addition, if X (the number after ERROR) is bigger than 0, you will also
+output a number of lines of context above and below the error as well.
+
+So if the source code file is:
+aaa
+bbb
+ccc
+ERROR 1
+ddd
+eee
+fff
+
+You'd output the missing semicolon error, with a line of context above and
+below it, as such:
+Error on line 4:
+ccc
+>>Missing ";"<<
+ddd
+
+Look at the sample input and outputfiles in /tmp/compiler for more examples.
+There is a /tmp/compiler/input_tester.sh script to test your code.
